@@ -10,7 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     private Vector2 movement;
-    [SerializeField] private Vector2 mousePos;
+
+    public static Vector2 mousePos;
 
 
     [SerializeField] private Camera cam;

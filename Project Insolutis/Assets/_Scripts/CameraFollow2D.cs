@@ -6,10 +6,32 @@ public class CameraFollow2D : MonoBehaviour
 {
     [SerializeField] private GameObject player;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private float timeOffset;
+
+    [SerializeField] private Vector2 posOffset;
+
+    private Vector3 startPos;
+    [SerializeField]private Vector3 endPos;
+
+    private void Update()
     {
+        //Camera current position
+        startPos = transform.position;
+        //Player current position
+        endPos = player.transform.position;
+
+        posOffset.x = PlayerMovement.mousePos.x/6;
+        posOffset.y = PlayerMovement.mousePos.y/6;
+
+        endPos.x += posOffset.x;
+        endPos.y += posOffset.y;
+        endPos.z = -10;
+
         
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
+    }
+
+    private void FixedUpdate()
+    {
+        transform.position = Vector3.Lerp(startPos, endPos, timeOffset * Time.deltaTime);
     }
 }
