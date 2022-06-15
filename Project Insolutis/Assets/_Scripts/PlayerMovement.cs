@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Camera cam;
 
+    [SerializeField] private GameObject mousePositionObject;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        mousePositionObject.transform.position = new Vector3(mousePos.x, mousePos.y, mousePositionObject.transform.position.z);
     }
 
     private void FixedUpdate()
