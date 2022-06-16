@@ -16,12 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 173d6b3aad7a3e246ade5b47340d5d8b
-  m_SerializeEntries:
-  - m_GUID: 49cc6bef648decf4b999627c2dc2aa5f
-    m_Address: brazil_flag
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-pt-BR
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 274c602eecabbec439944ee6036e69b4, type: 2}
   m_SchemaSet:
