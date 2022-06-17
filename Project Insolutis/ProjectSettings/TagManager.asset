@@ -7,6 +7,15 @@ TagManager:
   - Red Card
   - Blue Card
   - Green Card
+  - Red Generator
+  - Green Generator
+  - Blue Generator
+  - Blue Portal 1
+  - Blue Portal 2
+  - Red Portal 1
+  - Red Portal 2
+  - Green Portal 1
+  - Green Portal 2
   layers:
   - Default
   - TransparentFX
