@@ -18,6 +18,8 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private GameObject bluePortalOne;
     [SerializeField] private GameObject bluePortalTwo;
 
+    [SerializeField] GameObject victoryScreen;
+
     private bool hasRedCard;
     private bool hasGreenCard;
     private bool hasBlueCard;
@@ -136,6 +138,13 @@ public class PlayerInteraction : MonoBehaviour
             bluePortalTwo.transform.GetChild(0).gameObject.SetActive(true);
 
         }
+    }
+
+    private void Update()
+    {
+        if(redCardComplete && greenCardComplete && blueCardComplete)
+            victoryScreen.SetActive(true);
+
     }
 
 }
